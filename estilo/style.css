@@ -97,6 +97,35 @@ main h1 {
     line-height: 2em;   
 }
 
+.imagem {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 30px 20px; /* 40px de distância vertical, 20px de distância horizontal */
+    margin: auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.imagem-artesanato-img {
+    display: block;
+    width: 100%;
+}
+
+.imagem-artesanato-img img {
+    width: 100%;
+    height: 280px;
+    border-radius: 8px;
+    object-fit: cover; /* Preenche o espaço sem distorcer */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagem-artesanato-img img:hover {
+    transform: scale(1.04); /* Dá um leve zoom de 4% na imagem */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra suave no fundo */
+    cursor: pointer;
+
+}
+
 main h2 {
     font-family: var(--fonte-padrão-a);
     font-size: 3em;
