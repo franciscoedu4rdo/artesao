@@ -79,7 +79,8 @@ body {
 main {
     background-color: white;
     padding: 20px;
-    margin: 0px 20px 15px 20px;
+    /* O clamp escolhe: no celular fica 8px, se a tela crescer ele aumenta até 50px */
+    margin: 0px clamp(8px, 4vw, 50px) 15px clamp(8px, 4vw, 50px); 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.582);
     border-radius: 10px;
 }
