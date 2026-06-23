@@ -79,7 +79,7 @@ body {
 main {
     background-color: white;
     padding: 20px;
-    margin: 0px 50px 15px 50px;
+    margin: 0px 20px 15px 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.582);
     border-radius: 10px;
 }
@@ -102,10 +102,10 @@ main h1 {
     display: grid;
     /* Reduzimos o mínimo para 1fr puro ou um valor menor para forçar 1 coluna no celular */
     grid-template-columns: 1fr; 
-    gap: 30px 20px;
+    gap: 30px 30px;
     margin: auto;
     max-width: 1200px;
-    padding: 15px; /* Reduzido um pouco para dar mais respiro nas bordas do celular */
+    padding: 19px; /* Reduzido um pouco para dar mais respiro nas bordas do celular */
     box-sizing: border-box;
 }
 
