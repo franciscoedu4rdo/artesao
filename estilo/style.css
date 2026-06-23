@@ -97,20 +97,29 @@ main h1 {
     line-height: 2em;   
 }
 
+/* --- CONFIGURAÇÃO PADRÃO (Focado em Celulares) --- */
 .imagem {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 colunas iguais */
-    gap: 30px 20px; /* 40px de distância vertical, 20px de distância horizontal */
+    /* Reduzimos o mínimo para 1fr puro ou um valor menor para forçar 1 coluna no celular */
+    grid-template-columns: 1fr; 
+    gap: 30px 20px;
     margin: auto;
     max-width: 1200px;
-    padding: 20px;
-    box-sizing: border-box; /* Garante que o padding não faça a caixa vazar */
+    padding: 15px; /* Reduzido um pouco para dar mais respiro nas bordas do celular */
+    box-sizing: border-box;
 }
 
-/* Quando abrir no PC, o código abaixo "da um soco" no de cima e força 3 colunas */
+/* --- PARA TELAS INTERMEDIÁRIAS (Tablets ou celulares deitados - Opcional) --- */
+@media (min-width: 600px) {
+    .imagem {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+}
+
+/* --- PARA COMPUTADORES (Trava em 3 colunas e não deixa virar 4) --- */
 @media (min-width: 992px) {
     .imagem {
-        grid-template-columns: repeat(3, 1fr); /* TRAVA EM 3 COLUNAS NO PC */
+        grid-template-columns: repeat(3, 1fr); /* Exatamente 3 colunas no PC */
     }
 }
 
