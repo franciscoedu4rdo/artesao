@@ -99,11 +99,19 @@ main h1 {
 
 .imagem {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 colunas iguais */
     gap: 30px 20px; /* 40px de distância vertical, 20px de distância horizontal */
     margin: auto;
     max-width: 1200px;
     padding: 20px;
+    box-sizing: border-box; /* Garante que o padding não faça a caixa vazar */
+}
+
+/* Quando abrir no PC, o código abaixo "da um soco" no de cima e força 3 colunas */
+@media (min-width: 992px) {
+    .imagem {
+        grid-template-columns: repeat(3, 1fr); /* TRAVA EM 3 COLUNAS NO PC */
+    }
 }
 
 .imagem-artesanato-img {
