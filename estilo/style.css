@@ -52,6 +52,7 @@ header h1 {
     font-size: 50px;
     margin-bottom: 20px;
     padding-top: 20px;
+    color: #65524D;
 }
 
 nav{ 
@@ -122,6 +123,11 @@ main h1 {
     .imagem {
         grid-template-columns: repeat(3, 1fr); /* Exatamente 3 colunas no PC */
     }
+}
+
+figcaption{
+    text-align: center;
+    color: #65524D;
 }
 
 .imagem-artesanato-img {
