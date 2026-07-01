@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <title>Produto 2</title>
+    <link rel="stylesheet" href="../estilo/pag1.css">
+</head>
+<body>
+    <header>
+        <h1>Produto 1</h1>
+    </header>
+    
+    <main>
+        <h1>Como foi feito?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, quae culpa. Est nulla quod, sint tempore laudantium autem minus recusandae! Ullam optio ab suscipit laudantium, repudiandae tempore quasi odit ut sint, perspiciatis ad. Quibusdam repudiandae, iste, quo corrupti unde dolor ullam doloremque labore molestias consectetur nostrum ex asperiores eius mollitia totam maxime et quia consequatur tenetur libero laboriosam? Repudiandae cumque sequi incidunt reiciendis voluptate neque modi consequuntur qui atque tenetur repellendus quia numquam, sapiente dolorem blanditiis officia perferendis. Provident temporibus eligendi rem quas deleniti maxime qui eum, fugit magnam obcaecati tenetur, eaque quod quaerat mollitia? Dolore eligendi inventore et quasi?</p>
+        <div class="imagem"> 
+            <figure class="imagem-artesanato">
+                <picture class="imagem-artesanato-img">
+                    <img src="../imagens/p4-4-1.jpg" alt="produto4">
+                </picture>
+            </figure>
+            <figure class="imagem-artesanato">
+                <picture class="imagem-artesanato-img">
+                    <img src="../imagens/p4-1.jpg" alt="produto4">
+                </picture>
+            </figure>
+            <figure class="imagem-artesanato">
+                <picture class="imagem-artesanato-img">
+                    <img src="../imagens/p4-2.png" alt="produto4">
+                </picture>
+            </figure>
+            <figure class="imagem-artesanato">
+                <picture class="imagem-artesanato-img">
+                    <img src="../imagens/p4-3.png" alt="produto4">
+                </picture>
+            </figure>
+        </div>
+        <div class="trab">
+            <h2>Materias Usados</h2>
+            <div class="lista">
+                <ul>
+                    <li>Cola</li>
+                    <li>corda de sizal</li>
+                    <li>novena</li>
+                    <li>panela velha</li>
+                    <li>cola</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+          <p>Entre em Contato em: Whatapp  <a href="#">(63) 9 9919-4551</a></p>
+    </footer>
+    <div id="modal" class="modal">
+  <span class="fechar">&times;</span>
+  <img class="modal-conteudo" id="imagem-ampliada">
+</div>
+<script>
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("imagem-ampliada");
+        const imagens = document.querySelectorAll(".imagem-artesanato-img img");
+
+        imagens.forEach(img => {
+          img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+          }
+        });
+
+        // Fechar ao clicar no X ou fora da imagem
+        document.querySelector(".fechar").onclick = () => modal.style.display = "none";
+        modal.onclick = (e) => { if(e.target == modal) modal.style.display = "none"; }
+    </script>
+</body>
+</html>
